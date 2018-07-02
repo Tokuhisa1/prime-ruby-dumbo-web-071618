@@ -1,9 +1,14 @@
 # Add  code here!
 def prime?(number)
-  for (let i = 2; i < number; i += 1) {
-    if number / i > 1
+  factor = 2
+
+  while factor < number
+    if number / factor > 1
       return false
     end
     
+    factor += 1
+  end
+
   return true
 end
